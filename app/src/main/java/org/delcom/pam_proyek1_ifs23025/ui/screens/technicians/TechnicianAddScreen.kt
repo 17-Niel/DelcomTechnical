@@ -150,7 +150,7 @@ fun TechniciansAddScreen(
     ) {
         TopAppBarComponent(
             navController = navController,
-            title = "Tambah Kegiatan",
+            title = "Tambah Barang Rusak",
             showBackButton = true,
         )
         Box(modifier = Modifier.weight(1f)) {
@@ -211,7 +211,7 @@ fun TechniciansAddUI(
                 OutlinedTextField(
                     value = dataTitle,
                     onValueChange = { dataTitle = it },
-                    label = { Text("Nama Kegiatan") },
+                    label = { Text("Nama Barang/Alat") },
                     leadingIcon = { Icon(Icons.Default.Engineering, contentDescription = null) },
                     shape = RoundedCornerShape(12.dp),
                     modifier = Modifier.fillMaxWidth(),
@@ -290,7 +290,7 @@ fun TechniciansAddUI(
                 OutlinedTextField(
                     value = dataDescription,
                     onValueChange = { dataDescription = it },
-                    label = { Text("Deskripsi Kegiatan") },
+                    label = { Text("Deskripsi Kerusakan Barang/Alat") },
                     leadingIcon = { Icon(Icons.Default.Info, contentDescription = null) },
                     shape = RoundedCornerShape(12.dp),
                     modifier = Modifier.fillMaxWidth().height(120.dp),

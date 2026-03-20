@@ -397,7 +397,7 @@ fun TechniciansDetailUI(
                 DetailItem(label = "Estimasi Biaya", value = "Rp ${safeEstimasi.ifEmpty { "0" }}")
                 HorizontalDivider(modifier = Modifier.padding(vertical = 12.dp), color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.1f))
 
-                DetailItem(label = "Deskripsi Kegiatan", value = safeDeskripsi.ifEmpty { "-" })
+                DetailItem(label = "Deskripsi Kerusakan Barang/Alat", value = safeDeskripsi.ifEmpty { "-" })
             }
         }
 

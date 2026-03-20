@@ -229,7 +229,7 @@ fun TechniciansScreen(
                     containerColor = MaterialTheme.colorScheme.primary,
                     contentColor = MaterialTheme.colorScheme.onPrimary
                 ) {
-                    Icon(imageVector = Icons.Default.Add, contentDescription = "Tambah Kegiatan")
+                    Icon(imageVector = Icons.Default.Add, contentDescription = "Tambah Barang Rusak")
                 }
             }
         }

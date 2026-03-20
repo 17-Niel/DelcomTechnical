@@ -328,7 +328,13 @@ class TechnicianViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             _uiState.update { it.copy(profileChangePassword = TechnicianActionUIState.Loading) }
             val tmpState = runCatching {
-                repository.putUserMePassword(authToken, RequestUserChangePassword(oldPassword, newPassword))
+                repository.putUserMePassword(
+                    authToken,
+                    RequestUserChangePassword(
+                        newPassword = newPassword,  // ← PERBAIKI: password baru
+                        password = oldPassword      // ← PERBAIKI: password lama
+                    )
+                )
             }.fold(
                 onSuccess = { response ->
                     if (response.status == "success") TechnicianActionUIState.Success(response.message)
