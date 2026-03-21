@@ -176,9 +176,9 @@ fun TechniciansScreen(
             ) {
                 val statuses = listOf(
                     null to "Semua Status",
-                    "belum terlaksana" to "Belum",
-                    "sudah terlaksana" to "Selesai",
-                    "dibatalkan" to "Batal"
+                    "Kerusakan Ringan" to "Rinqan",
+                    "Kerusakan Sedang" to "Sedang",
+                    "Kerusakan Berat" to "Berat"
                 )
                 items(statuses) { (key, label) ->
                     FilterChip(
@@ -289,7 +289,7 @@ fun TechnicianItemUI(
     val safeTeknisi = technician.teknisi ?: "-"
     val safeTanggal = technician.tanggalDiterima ?: "-"
     val safeUpdatedAt = technician.updatedAt ?: "0"
-    val safeStatus = technician.status ?: "belum terlaksana"
+    val safeStatus = technician.status ?: "Kerusakan Ringan"
 
     Card(
         modifier = Modifier
@@ -363,14 +363,14 @@ fun TechnicianItemUI(
                 Spacer(modifier = Modifier.height(8.dp))
 
                 val statusColor = when (safeStatus.lowercase()) {
-                    "sudah terlaksana" -> MaterialTheme.colorScheme.secondaryContainer
-                    "dibatalkan" -> MaterialTheme.colorScheme.errorContainer
+                    "Kerusakan Sedang" -> MaterialTheme.colorScheme.secondaryContainer
+                    "Kerusakan Berat" -> MaterialTheme.colorScheme.errorContainer
                     else -> MaterialTheme.colorScheme.tertiaryContainer
                 }
 
                 val statusTextColor = when (safeStatus.lowercase()) {
-                    "sudah terlaksana" -> MaterialTheme.colorScheme.onSecondaryContainer
-                    "dibatalkan" -> MaterialTheme.colorScheme.onErrorContainer
+                    "Kerusakan Sedang" -> MaterialTheme.colorScheme.onSecondaryContainer
+                    "Kerusakan Berat" -> MaterialTheme.colorScheme.onErrorContainer
                     else -> MaterialTheme.colorScheme.onTertiaryContainer
                 }
 

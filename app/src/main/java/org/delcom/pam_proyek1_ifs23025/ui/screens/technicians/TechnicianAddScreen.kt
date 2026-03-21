@@ -177,7 +177,7 @@ fun TechniciansAddUI(
     var dataNama by remember { mutableStateOf(tmpTechnician?.namaPemilik ?: "") }
     var dataBiaya by remember { mutableStateOf(tmpTechnician?.estimasiBiaya ?: "") }
     var dataTeknisi by remember { mutableStateOf(tmpTechnician?.teknisi ?: "") }
-    var dataStatus by remember { mutableStateOf(tmpTechnician?.status ?: "belum terlaksana") }
+    var dataStatus by remember { mutableStateOf(tmpTechnician?.status ?: "Kerusakan Ringan") }
 
     var expandedTeknisi by remember { mutableStateOf(false) }
 
@@ -318,7 +318,7 @@ fun TechniciansAddUI(
                     modifier = Modifier.padding(bottom = 8.dp)
                 )
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    val statusOptions = listOf("belum terlaksana", "sudah terlaksana", "dibatalkan")
+                    val statusOptions = listOf("Kerusakan Ringan", "Kerusakan Sedang", "Kerusakan Berat")
                     statusOptions.forEach { option ->
                         val isSelected = dataStatus == option
                         Row(

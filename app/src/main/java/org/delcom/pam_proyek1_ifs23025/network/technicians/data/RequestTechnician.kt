@@ -8,7 +8,7 @@ data class RequestTechnician (
     val description: String,
 
     // Properti baru disesuaikan dengan Backend
-    val status: String = "belum terlaksana",
+    val status: String = "Kerusakan Ringan",
     val tanggalDiterima: String,
     val namaPemilik: String,
     val estimasiBiaya: String,

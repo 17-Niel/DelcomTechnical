@@ -234,19 +234,19 @@ fun HomeUI(
                                 modifier = Modifier.weight(1f)
                             )
                             StatusCard(
-                                title = "Belum",
+                                title = "Ringan",
                                 value = statsState.data.active.toString(),
                                 icon = Icons.Default.Schedule,
                                 modifier = Modifier.weight(1f)
                             )
                             StatusCard(
-                                title = "Selesai",
+                                title = "Sedang",
                                 value = statsState.data.complete.toString(),
                                 icon = Icons.Default.CheckCircle,
                                 modifier = Modifier.weight(1f)
                             )
                             StatusCard(
-                                title = "Batal",
+                                title = "Berat",
                                 value = statsState.data.canceled.toString(),
                                 icon = Icons.Default.Cancel,
                                 modifier = Modifier.weight(1f)

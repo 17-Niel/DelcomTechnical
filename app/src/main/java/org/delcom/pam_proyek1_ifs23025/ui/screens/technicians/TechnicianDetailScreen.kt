@@ -231,7 +231,7 @@ fun TechniciansDetailUI(
 
     val safeId = technician.id ?: ""
     val safeTitle = technician.title ?: "Tanpa Judul"
-    val safeStatus = technician.status ?: "belum terlaksana"
+    val safeStatus = technician.status ?: "Kerusakan Ringan"
     val safeTeknisi = technician.teknisi ?: "-"
     val safeTanggal = technician.tanggalDiterima ?: "-"
     val safeNama = technician.namaPemilik ?: "-"
@@ -347,14 +347,14 @@ fun TechniciansDetailUI(
         Spacer(modifier = Modifier.height(12.dp))
 
         val statusColor = when (safeStatus.lowercase()) {
-            "sudah terlaksana" -> MaterialTheme.colorScheme.secondaryContainer
-            "dibatalkan" -> MaterialTheme.colorScheme.errorContainer
+            "Kerusakan Sedang" -> MaterialTheme.colorScheme.secondaryContainer
+            "Kerusakan Berat" -> MaterialTheme.colorScheme.errorContainer
             else -> MaterialTheme.colorScheme.tertiaryContainer
         }
 
         val statusTextColor = when (safeStatus.lowercase()) {
-            "sudah terlaksana" -> MaterialTheme.colorScheme.onSecondaryContainer
-            "dibatalkan" -> MaterialTheme.colorScheme.onErrorContainer
+            "Kerusakan Sedang" -> MaterialTheme.colorScheme.onSecondaryContainer
+            "Kerusakan Berat" -> MaterialTheme.colorScheme.onErrorContainer
             else -> MaterialTheme.colorScheme.onTertiaryContainer
         }
 

@@ -20,7 +20,7 @@ data class ResponseTechnicianData(
     val description: String,
 
     // Field baru pengganti isDone dan urgency
-    val status: String = "belum terlaksana",
+    val status: String = "Kerusakan Ringan",
     val tanggalDiterima: String = "",
     val namaPemilik: String = "",
     val estimasiBiaya: String = "",
